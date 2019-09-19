@@ -13,9 +13,12 @@
 		8F45150123331CC0009E0B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4514FF23331CC0009E0B60 /* Main.storyboard */; };
 		8F45150323331CC2009E0B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F45150223331CC2009E0B60 /* Assets.xcassets */; };
 		8F45150623331CC2009E0B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F45150423331CC2009E0B60 /* LaunchScreen.storyboard */; };
+		ED81709FD5836516F5D4FAE7 /* Pods_GridPhotoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C4ED8C8AC8560831042607 /* Pods_GridPhotoDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5823E03040D16CD8E2BF73F0 /* Pods-GridPhotoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridPhotoDemo.debug.xcconfig"; path = "Target Support Files/Pods-GridPhotoDemo/Pods-GridPhotoDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		89E59CF755E685C9D8B2865C /* Pods-GridPhotoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridPhotoDemo.release.xcconfig"; path = "Target Support Files/Pods-GridPhotoDemo/Pods-GridPhotoDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8F4514F623331CC0009E0B60 /* GridPhotoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridPhotoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4514F923331CC0009E0B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F4514FB23331CC0009E0B60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8F45150223331CC2009E0B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F45150523331CC2009E0B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F45150723331CC2009E0B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97C4ED8C8AC8560831042607 /* Pods_GridPhotoDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GridPhotoDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED81709FD5836516F5D4FAE7 /* Pods_GridPhotoDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D9D886A474657D1D3AE1A3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97C4ED8C8AC8560831042607 /* Pods_GridPhotoDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F4514ED23331CC0009E0B60 = {
 			isa = PBXGroup;
 			children = (
 				8F4514F823331CC0009E0B60 /* GridPhotoDemo */,
 				8F4514F723331CC0009E0B60 /* Products */,
+				ED0008BFE088C14ABFE9BEA4 /* Pods */,
+				8D9D886A474657D1D3AE1A3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = GridPhotoDemo;
 			sourceTree = "<group>";
 		};
+		ED0008BFE088C14ABFE9BEA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5823E03040D16CD8E2BF73F0 /* Pods-GridPhotoDemo.debug.xcconfig */,
+				89E59CF755E685C9D8B2865C /* Pods-GridPhotoDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F45150A23331CC2009E0B60 /* Build configuration list for PBXNativeTarget "GridPhotoDemo" */;
 			buildPhases = (
+				32651099B9D54FBE657DFAC3 /* [CP] Check Pods Manifest.lock */,
 				8F4514F223331CC0009E0B60 /* Sources */,
 				8F4514F323331CC0009E0B60 /* Frameworks */,
 				8F4514F423331CC0009E0B60 /* Resources */,
+				5BC78A912DABD5647E238D92 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32651099B9D54FBE657DFAC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GridPhotoDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BC78A912DABD5647E238D92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GridPhotoDemo/Pods-GridPhotoDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GridPhotoDemo/Pods-GridPhotoDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GridPhotoDemo/Pods-GridPhotoDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F4514F223331CC0009E0B60 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8F45150B23331CC2009E0B60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5823E03040D16CD8E2BF73F0 /* Pods-GridPhotoDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +371,7 @@
 		};
 		8F45150C23331CC2009E0B60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89E59CF755E685C9D8B2865C /* Pods-GridPhotoDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
