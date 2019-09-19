@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		8F45150123331CC0009E0B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4514FF23331CC0009E0B60 /* Main.storyboard */; };
 		8F45150323331CC2009E0B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F45150223331CC2009E0B60 /* Assets.xcassets */; };
 		8F45150623331CC2009E0B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F45150423331CC2009E0B60 /* LaunchScreen.storyboard */; };
+		8F45150E233373BC009E0B60 /* JsonPlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F45150D233373BC009E0B60 /* JsonPlaceholderViewController.swift */; };
 		ED81709FD5836516F5D4FAE7 /* Pods_GridPhotoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C4ED8C8AC8560831042607 /* Pods_GridPhotoDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		8F45150223331CC2009E0B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F45150523331CC2009E0B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F45150723331CC2009E0B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F45150D233373BC009E0B60 /* JsonPlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPlaceholderViewController.swift; sourceTree = "<group>"; };
 		97C4ED8C8AC8560831042607 /* Pods_GridPhotoDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GridPhotoDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				8F4514F923331CC0009E0B60 /* AppDelegate.swift */,
 				8F4514FB23331CC0009E0B60 /* SceneDelegate.swift */,
 				8F4514FD23331CC0009E0B60 /* ViewController.swift */,
+				8F45150D233373BC009E0B60 /* JsonPlaceholderViewController.swift */,
 				8F4514FF23331CC0009E0B60 /* Main.storyboard */,
 				8F45150223331CC2009E0B60 /* Assets.xcassets */,
 				8F45150423331CC2009E0B60 /* LaunchScreen.storyboard */,
@@ -88,7 +91,6 @@
 				5823E03040D16CD8E2BF73F0 /* Pods-GridPhotoDemo.debug.xcconfig */,
 				89E59CF755E685C9D8B2865C /* Pods-GridPhotoDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +211,7 @@
 			files = (
 				8F4514FE23331CC0009E0B60 /* ViewController.swift in Sources */,
 				8F4514FA23331CC0009E0B60 /* AppDelegate.swift in Sources */,
+				8F45150E233373BC009E0B60 /* JsonPlaceholderViewController.swift in Sources */,
 				8F4514FC23331CC0009E0B60 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

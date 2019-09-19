@@ -14,7 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
-
+    @IBAction func actionNextButton(_ sender: Any) {
+        switchToJsonPlaceholderPage()
+    }
+    
+    func switchToJsonPlaceholderPage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "JsonPlaceholderViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
