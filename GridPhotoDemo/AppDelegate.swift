@@ -8,22 +8,31 @@
 
 import UIKit
 
+import Alamofire
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    let mn:JsonPlaceholderManager = JsonPlaceholderManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
+
         let mainController = storyboard.instantiateViewController(withIdentifier: "ViewController")
         let navigationController = UINavigationController(rootViewController: mainController)
         navigationController.navigationBar.isTranslucent = false
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    
+        mn.requestJsonPlaceholder { result in
+            for data in result {
+                print("\(data.id)")
+            }
+        }
         
         return true
     }
