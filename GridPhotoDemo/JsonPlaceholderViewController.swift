@@ -13,7 +13,8 @@ class JsonPlaceholderViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let manager:JsonPlaceholderManager = JsonPlaceholderManager()
     var collectionViewListData:[JsonPlaceholderData]?
-    
+    var imagePool:[String : UIImage] = [:]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
@@ -23,7 +24,7 @@ class JsonPlaceholderViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
-    
+
     func setupCollection() {
         let fullScreenSize :CGSize! = UIScreen.main.bounds.size
         let gap:CGFloat = 5
@@ -54,10 +55,25 @@ extension JsonPlaceholderViewController:UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JsonPlacejolderCollectionViewCell", for: indexPath) as! JsonPlacejolderCollectionViewCell
         
         if let data = self.collectionViewListData?[indexPath.row] {
+            cell.updateData(data: data)
             
-            cell.idLabel?.text = "\(data.id)"
-            cell.titleLabel?.text = data.title
-            cell.backgroundColor = UIColor.red
+            //test
+            if let url = data.thumbnailUrl, !(self.imagePool[url] != nil) {
+                manager.downloadThumbnail(url: url, image:{result  in
+                    guard "success" == result["result"] as? String else {
+                        return
+                    }
+                    
+                    if (url == result["url"] as? String) {
+                        self.imagePool[url] = result["image"] as! UIImage
+                    }
+                })
+            }
+            
+            if let url = data.thumbnailUrl {
+                cell.imageView.image = self.imagePool[url]
+            }
+            
         }
 
         return cell

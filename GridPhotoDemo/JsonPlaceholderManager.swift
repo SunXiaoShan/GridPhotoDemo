@@ -18,6 +18,8 @@ struct JsonPlaceholderData:Codable {
 }
 
 class JsonPlaceholderManager: NSObject {
+    static let queue = DispatchQueue(label: "com.JsonPlaceholderManager.queue")
+
     let url = "https://jsonplaceholder.typicode.com/photos"
     /*
      {
@@ -30,7 +32,7 @@ class JsonPlaceholderManager: NSObject {
      */
     
     func requestJsonPlaceholder( api: @escaping ([JsonPlaceholderData]) -> Void ) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+        JsonPlaceholderManager.queue.async { [weak self] in
             guard let self = self else {
                 return
             }
@@ -48,13 +50,33 @@ class JsonPlaceholderManager: NSObject {
         }
     }
     
-    func downloadThumbnail(url:String, image:@escaping (UIImage?) -> Void ) {
-        Alamofire.request(url, method: .get)
-        .validate()
-        .responseData(completionHandler: { (responseData) in
-            DispatchQueue.main.async {
-                image(UIImage(data: responseData.data!) ?? nil)
-            }
-        })
+    func downloadThumbnail(url:String, image:@escaping ([String:Any]) -> Void ) {
+        let url = url
+        JsonPlaceholderManager.queue.async {
+            Alamofire.request(url, method: .get)
+            .validate()
+            .responseData(completionHandler: { (responseData) in
+                DispatchQueue.main.async {
+                    guard responseData.result.isSuccess else {
+                        let result:[String : Any] = [
+                            "url": String(describing: responseData.request!),
+                            "result": "failed"
+                            ]
+
+                        image(result)
+                        return
+                    }
+
+                    let result:[String : Any] = [
+                        "url": String(describing: responseData.request!),
+                        "image": UIImage(data: responseData.data!)!,
+                        "result": "success"
+                        ]
+
+                    image(result)
+                }
+            })
+
+        }
     }
 }
