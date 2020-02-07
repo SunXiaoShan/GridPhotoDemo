@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8F4514FA23331CC0009E0B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4514F923331CC0009E0B60 /* AppDelegate.swift */; };
-		8F4514FC23331CC0009E0B60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4514FB23331CC0009E0B60 /* SceneDelegate.swift */; };
 		8F4514FE23331CC0009E0B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4514FD23331CC0009E0B60 /* ViewController.swift */; };
 		8F45150123331CC0009E0B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4514FF23331CC0009E0B60 /* Main.storyboard */; };
 		8F45150323331CC2009E0B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F45150223331CC2009E0B60 /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 		89E59CF755E685C9D8B2865C /* Pods-GridPhotoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridPhotoDemo.release.xcconfig"; path = "Target Support Files/Pods-GridPhotoDemo/Pods-GridPhotoDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8F4514F623331CC0009E0B60 /* GridPhotoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridPhotoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4514F923331CC0009E0B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F4514FB23331CC0009E0B60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8F4514FD23331CC0009E0B60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F45150023331CC0009E0B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F45150223331CC2009E0B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				8F4514F923331CC0009E0B60 /* AppDelegate.swift */,
-				8F4514FB23331CC0009E0B60 /* SceneDelegate.swift */,
 				8F4514FD23331CC0009E0B60 /* ViewController.swift */,
 				8F45150D233373BC009E0B60 /* JsonPlaceholderViewController.swift */,
 				8F45150F233377ED009E0B60 /* JsonPlaceholderManager.swift */,
@@ -220,7 +217,6 @@
 				8F451512233382A1009E0B60 /* JsonPlacejolderCollectionViewCell.swift in Sources */,
 				8F45150E233373BC009E0B60 /* JsonPlaceholderViewController.swift in Sources */,
 				8F451510233377ED009E0B60 /* JsonPlaceholderManager.swift in Sources */,
-				8F4514FC23331CC0009E0B60 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KKC9T8D9X4;
+				DEVELOPMENT_TEAM = 6VAZGSKA8H;
 				INFOPLIST_FILE = GridPhotoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KKC9T8D9X4;
+				DEVELOPMENT_TEAM = 6VAZGSKA8H;
 				INFOPLIST_FILE = GridPhotoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
